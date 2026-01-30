@@ -1,5 +1,6 @@
 import Layout from "@/components/layout/Layout";
 import { Star, Shield, Zap, Award, CheckCircle } from "lucide-react";
+import teamImage from "@/assets/team-hvac.jpg"; // Importação adicionada
 
 const values = [
   {
