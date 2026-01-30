@@ -43,7 +43,7 @@ const Header = () => {
           <img 
             src="/logo-oficial.png" 
             alt="RUPALO GERMO LTD Logo" 
-            className="h-14 w-auto object-contain" // Ajustado o tamanho para h-14 e object-contain
+            className="h-16 w-auto object-contain" // Aumentado o tamanho para h-16 para melhor visibilidade
           />
         </Link>
 

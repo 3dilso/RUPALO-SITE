@@ -76,7 +76,7 @@ const FeaturedServicesSection = () => {
                     </li>
                   ))}
                 </ul>
-                <Button asChild variant="secondary" className="w-full">
+                <Button asChild variant="secondary" className="w-full text-primary-foreground"> {/* Adicionado text-primary-foreground */}
                   <Link to="/servicos">Saber Mais</Link>
                 </Button>
               </div>

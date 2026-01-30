@@ -25,15 +25,14 @@ const HeroSection = () => {
           className="max-w-4xl mx-auto"
         >
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold text-primary-foreground leading-tight mb-6 drop-shadow-lg">
-            <span className="block">Frio Industrial:</span>
-            <span className="block text-accent">Eficiência e Confiança em Luanda</span>
+            <span className="block">Conforto Térmico Industrial:</span>
+            <span className="block text-accent">A Especialidade da RUPALO GERMO LTD</span>
           </h1>
 
           <p
             className="text-lg md:text-xl text-primary-foreground/90 mb-10 max-w-3xl mx-auto"
           >
-            Manutenção especializada para seus sistemas de refrigeração industrial.
-            Garanta o desempenho máximo e a durabilidade dos seus equipamentos.
+            Soluções inovadoras em frio industrial para garantir o ambiente ideal e a máxima eficiência dos seus equipamentos em Luanda.
           </p>
 
           <motion.div
