@@ -104,14 +104,7 @@ const Footer = () => {
                   </a>
                 </div>
               </li>
-              <li className="flex items-start gap-3">
-                <MessageCircle className="w-5 h-5 text-whatsapp mt-0.5" />
-                <div>
-                  <a href="https://wa.me/244923411375?text=Olá, gostaria de solicitar um orçamento para manutenção de frio industrial." className="text-primary-foreground/70 hover:text-primary-foreground">
-                    +244 923 411 375
-                  </a>
-                </div>
-              </li>
+          
               <li className="flex items-start gap-3">
                 <Mail className="w-5 h-5 text-primary mt-0.5" />
                 <a href="mailto:info@rupalogermo.com" className="text-primary-foreground/70 hover:text-primary-foreground">
