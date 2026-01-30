@@ -35,8 +35,8 @@ const ServicesQuick = () => {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               className="group bg-card rounded-xl p-8 shadow-card hover:shadow-card-hover transition-all duration-300 border border-border hover:border-primary/20"
             >
-              <div className="w-14 h-14 rounded-lg bg-secondary flex items-center justify-center mb-6 group-hover:bg-primary transition-colors">
-                <service.icon className="w-7 h-7 text-primary group-hover:text-primary-foreground transition-colors" />
+              <div className="w-14 h-14 rounded-lg bg-primary/10 flex items-center justify-center mb-6 group-hover:bg-primary transition-colors"> {/* Cor do círculo ajustada */}
+                <service.icon className="w-7 h-7 text-primary group-hover:text-primary-foreground transition-colors" /> {/* Cor do ícone ajustada */}
               </div>
               <h3 className="text-xl font-bold mb-3 text-foreground">
                 {service.title}

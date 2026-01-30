@@ -122,7 +122,7 @@ const Servicos = () => {
                   <h2 className="text-3xl font-bold text-foreground mb-4">
                     {service.title}
                   </h2>
-                  <p className="text-lg text-muted-foreground mb-6">
+                  <p className="text-muted-foreground mb-6">
                     {service.description}
                   </p>
 

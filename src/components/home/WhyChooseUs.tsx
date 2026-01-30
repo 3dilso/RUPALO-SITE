@@ -5,17 +5,17 @@ import { motion } from "framer-motion";
 import teamImage from "@/assets/team-hvac.jpg";
 
 const benefits = [
-  "Mais de 10 anos de experiência no setor",
-  "Técnicos certificados e qualificados",
-  "Compromisso com a excelência",
-  "Serviços rápidos e de alta qualidade",
-  "Foco em eficiência e durabilidade",
-  "Relações duradouras com clientes",
+  "Equipa técnica certificada e experiente",
+  "Compromisso com a excelência e qualidade",
+  "Serviços rápidos e eficientes",
+  "Foco na durabilidade dos equipamentos",
+  "Parceria e confiança com o cliente",
+  "Soluções personalizadas para cada necessidade",
 ];
 
 const WhyChooseUs = () => {
   return (
-    <section className="py-20 bg-surface">
+    <section className="py-20 bg-background"> {/* Alterado para bg-background para melhor contraste com texto */}
       <div className="container mx-auto">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Image */}
@@ -46,12 +46,12 @@ const WhyChooseUs = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
           >
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
-              Por Que Escolher a RUPALO GERMO LTD?
+              Por Que a RUPALO GERMO LTD é a Sua Melhor Escolha?
             </h2>
             <p className="text-muted-foreground mb-8 text-lg">
-              Somos a sua escolha de confiança para todas as necessidades de
-              manutenção de frio industrial em Luanda. Nossa experiência e dedicação garantem o
-              melhor serviço e a longevidade dos seus equipamentos.
+              Escolher a RUPALO GERMO LTD significa optar por um parceiro dedicado à
+              excelência em manutenção de frio industrial em Luanda. Nossa abordagem
+              foca na qualidade, rapidez e na longevidade dos seus equipamentos.
             </p>
 
             <ul className="space-y-4 mb-8">

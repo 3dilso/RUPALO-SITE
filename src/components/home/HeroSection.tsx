@@ -13,7 +13,7 @@ const HeroSection = () => {
           alt="Técnico realizando manutenção em sistema de frio industrial"
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-hero" />
+        <div className="absolute inset-0 bg-gradient-hero" /> {/* Opacidade ajustada no CSS */}
       </div>
 
       {/* Content */}
@@ -25,14 +25,15 @@ const HeroSection = () => {
           className="max-w-4xl mx-auto"
         >
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold text-primary-foreground leading-tight mb-6 drop-shadow-lg">
-            <span className="block">Excelência em Frio Industrial</span>
-            <span className="block text-rupalo-vibrant-blue">Manutenção que Você Pode Confiar</span>
+            <span className="block">Frio Industrial:</span>
+            <span className="block text-accent">Eficiência e Confiança em Luanda</span>
           </h1>
 
           <p
             className="text-lg md:text-xl text-primary-foreground/90 mb-10 max-w-3xl mx-auto"
           >
-            Soluções completas em manutenção preventiva, corretiva, diagnóstico de falhas e modernização de equipamentos para o setor industrial em Luanda.
+            Manutenção especializada para seus sistemas de refrigeração industrial.
+            Garanta o desempenho máximo e a durabilidade dos seus equipamentos.
           </p>
 
           <motion.div
@@ -51,8 +52,7 @@ const HeroSection = () => {
         </motion.div>
       </div>
 
-      {/* Decorative Element */}
-      <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-background to-transparent" />
+      {/* Removido o div com o gradiente inferior */}
     </section>
   );
 };

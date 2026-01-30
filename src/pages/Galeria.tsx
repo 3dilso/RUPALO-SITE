@@ -259,7 +259,7 @@ const Galeria = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-4">
+            <h2 className="text-2xl md:text-3xl font-bold text-primary-foreground mb-4">
               Precisa de Manutenção para Seus Sistemas?
             </h2>
             <Button asChild size="lg">

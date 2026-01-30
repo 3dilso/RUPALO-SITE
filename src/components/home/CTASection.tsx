@@ -12,10 +12,10 @@ const CTASection = () => {
           viewport={{ once: true }}
           className="text-center max-w-2xl mx-auto"
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-primary-foreground mb-4"> {/* Alterado para primary-foreground para melhor contraste no gradiente */}
             Pronto para Otimizar Seus Sistemas de Frio Industrial?
           </h2>
-          <p className="text-lg text-muted-foreground mb-8">
+          <p className="text-primary-foreground/90 mb-8 text-lg"> {/* Alterado para primary-foreground/90 para melhor contraste no gradiente */}
             Peça um orçamento gratuito hoje mesmo e descubra como podemos
             garantir a eficiência e durabilidade dos seus equipamentos de refrigeração.
           </p>
