@@ -1,23 +1,23 @@
-import { Wrench, Calendar, Headphones } from "lucide-react";
+import { Wrench, Calendar, Search } from "lucide-react"; // Alterado Headphones para Search
 import { motion } from "framer-motion";
 
 const services = [
   {
     icon: Wrench,
-    title: "Instalação Profissional",
+    title: "Manutenção Preventiva",
     description:
-      "Instalação completa de sistemas de ar condicionado residenciais e comerciais",
+      "Programas de manutenção para garantir a máxima eficiência e prolongar a vida útil dos seus sistemas de frio industrial.",
   },
   {
     icon: Calendar,
-    title: "Manutenção Preventiva",
+    title: "Manutenção Corretiva",
     description:
-      "Contratos de manutenção para garantir eficiência e durabilidade",
+      "Intervenções rápidas e eficazes para restaurar o funcionamento ideal dos seus equipamentos de refrigeração.",
   },
   {
-    icon: Headphones,
-    title: "Assistência 24/7",
-    description: "Reparos rápidos e assistência técnica quando precisar",
+    icon: Search, // Ícone de busca para diagnóstico
+    title: "Diagnóstico de Falhas",
+    description: "Identificação precisa de problemas para soluções eficazes e duradouras em sistemas de frio industrial.",
   },
 ];
 

@@ -11,58 +11,58 @@ import acModernImage from "@/assets/ac-modern.jpg";
 const services = [
   {
     image: heroImage,
-    title: "Instalação Profissional",
-    description: "Instalação completa de sistemas de ar condicionado com garantia.",
+    title: "Manutenção Preventiva",
+    description: "Programas de manutenção para garantir a máxima eficiência e prolongar a vida útil dos seus sistemas de frio industrial.",
     features: [
-      "Instalação residencial (split, janela, central)",
-      "Instalação comercial (escritórios, lojas, restaurantes)",
-      "Instalação industrial",
-      "Avaliação técnica gratuita",
-      "Garantia de instalação",
-    ],
-    cta: "Pedir Orçamento",
-    ctaLink: "/contacto",
-  },
-  {
-    image: maintenanceImage,
-    title: "Manutenção Especializada",
-    description: "Manutenção preventiva e corretiva para máxima eficiência.",
-    features: [
-      "Limpeza completa de sistemas",
-      "Verificação de gás refrigerante",
-      "Inspeção de componentes",
-      "Contratos mensais/anuais",
-      "Relatórios técnicos",
+      "Inspeções regulares e detalhadas",
+      "Limpeza e calibração de componentes",
+      "Verificação de níveis de gás refrigerante",
+      "Relatórios técnicos e recomendações",
+      "Contratos de manutenção personalizados",
     ],
     cta: "Solicitar Contrato",
     ctaLink: "/contacto",
   },
   {
-    image: repairImage,
-    title: "Reparos Rápidos",
-    description: "Assistência técnica quando você mais precisa.",
+    image: maintenanceImage,
+    title: "Manutenção Corretiva e Reparação",
+    description: "Intervenções rápidas e eficazes para restaurar o funcionamento ideal dos seus equipamentos de refrigeração industrial.",
     features: [
-      "Diagnóstico técnico preciso",
-      "Reparos de todos os tipos de AC",
-      "Peças originais",
-      "Atendimento emergencial",
-      "Garantia nos reparos",
+      "Diagnóstico preciso de falhas",
+      "Reparo de compressores, condensadores, evaporadores",
+      "Substituição de peças com garantia",
+      "Atendimento emergencial 24/7",
+      "Minimização do tempo de inatividade",
     ],
-    cta: "Solicitar Assistência",
+    cta: "Solicitar Reparo",
+    ctaLink: "/contacto",
+  },
+  {
+    image: repairImage,
+    title: "Diagnóstico de Falhas Técnicas",
+    description: "Identificação precisa de problemas para soluções eficazes e duradouras em sistemas de frio industrial.",
+    features: [
+      "Análise aprofundada de sistemas",
+      "Uso de equipamentos de diagnóstico avançados",
+      "Relatórios detalhados com causas e soluções",
+      "Consultoria técnica especializada",
+      "Prevenção de futuras avarias",
+    ],
+    cta: "Agendar Diagnóstico",
     ctaLink: "/contacto",
   },
   {
     image: acModernImage,
-    title: "Venda de Equipamentos",
-    description: "Equipamentos das melhores marcas com instalação incluída.",
+    title: "Atualização e Modernização de Equipamentos",
+    description: "Melhore a eficiência e o desempenho dos seus sistemas de frio industrial com as últimas tecnologias.",
     features: [
-      "Marcas reconhecidas internacionalmente",
-      "Consultoria para escolha ideal",
-      "Instalação incluída",
-      "Garantia de fábrica",
-      "Financiamento disponível",
+      "Substituição de componentes obsoletos",
+      "Otimização energética",
+      "Integração de novas tecnologias",
+      "Consultoria para upgrades",
+      "Aumento da capacidade e confiabilidade",
     ],
-    cta: "Ver Catálogo",
+    cta: "Consultar Opções",
     ctaLink: "/contacto",
   },
 ];
@@ -86,7 +86,7 @@ const Servicos = () => {
             transition={{ delay: 0.1 }}
             className="text-xl text-primary-foreground/80"
           >
-            Soluções Completas em Climatização
+            Soluções Completas em Manutenção de Frio Industrial
           </motion.p>
         </div>
       </section>
@@ -157,11 +157,11 @@ const Servicos = () => {
             className="text-center"
           >
             <p className="text-xl text-muted-foreground mb-6">
-              Não encontrou o que procura? Entre em contacto connosco
+              Precisa de assistência imediata ou tem alguma dúvida?
             </p>
             <Button asChild variant="whatsapp" size="lg">
               <a
-                href="https://wa.me/244923456789"
+                href="https://wa.me/244923411375?text=Olá, gostaria de solicitar um orçamento para manutenção de frio industrial."
                 target="_blank"
                 rel="noopener noreferrer"
               >

@@ -10,7 +10,7 @@ const HeroSection = () => {
       <div className="absolute inset-0">
         <img
           src={heroImage}
-          alt="Técnico instalando ar condicionado"
+          alt="Técnico realizando manutenção em sistema de frio industrial"
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-hero" />
@@ -25,7 +25,7 @@ const HeroSection = () => {
             transition={{ duration: 0.6 }}
             className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground leading-tight mb-6"
           >
-            Soluções Completas em Climatização para Luanda
+            Soluções Completas em Manutenção de Frio Industrial para Luanda
           </motion.h1>
 
           <motion.p
@@ -34,8 +34,7 @@ const HeroSection = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-lg md:text-xl text-primary-foreground/90 mb-8 max-w-2xl"
           >
-            Instalação, Manutenção e Assistência Técnica de Ar Condicionado para
-            Residências e Empresas
+            Manutenção Preventiva, Corretiva, Diagnóstico de Falhas e Modernização de Equipamentos para o Setor Industrial
           </motion.p>
 
           <motion.div
@@ -45,7 +44,7 @@ const HeroSection = () => {
             className="flex flex-col sm:flex-row gap-4"
           >
             <Button asChild variant="hero" size="xl">
-              <Link to="/contacto">Pedir Orçamento</Link>
+              <Link to="/contacto">Solicitar Orçamento</Link>
             </Button>
             <Button asChild variant="heroOutline" size="xl">
               <Link to="/servicos">Ver Serviços</Link>

@@ -2,8 +2,8 @@ import { MessageCircle } from "lucide-react";
 import { motion } from "framer-motion";
 
 const WhatsAppButton = () => {
-  const whatsappNumber = "244923456789";
-  const message = encodeURIComponent("Olá! Gostaria de pedir um orçamento para serviços de ar condicionado.");
+  const whatsappNumber = "244923411375"; // Usando o primeiro número fornecido
+  const message = encodeURIComponent("Olá, gostaria de solicitar um orçamento para manutenção de frio industrial.");
 
   return (
     <motion.a

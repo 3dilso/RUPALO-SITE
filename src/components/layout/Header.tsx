@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X, Wind } from "lucide-react";
+import { Menu, X } from "lucide-react"; // Removido Wind, pois será substituído pela logo
 import { Button } from "@/components/ui/button";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -8,7 +8,7 @@ const navLinks = [
   { name: "Home", path: "/" },
   { name: "Sobre Nós", path: "/sobre" },
   { name: "Serviços", path: "/servicos" },
-  { name: "Galeria", path: "/galeria" },
+  { name: "Projetos", path: "/galeria" }, // Alterado Galeria para Projetos
   { name: "Contacto", path: "/contacto" },
 ];
 
@@ -40,11 +40,9 @@ const Header = () => {
       <div className="container mx-auto flex items-center justify-between">
         {/* Logo */}
         <Link to="/" className="flex items-center gap-2">
-          <div className="flex items-center justify-center w-10 h-10 rounded-lg bg-primary text-primary-foreground">
-            <Wind className="w-6 h-6" />
-          </div>
+          <img src="/logo-oficial.png" alt="RUPALO GERMO LTD Logo" className="h-10 w-auto" />
           <span className={`text-xl font-bold ${isScrolled ? "text-foreground" : "text-primary-foreground"}`}>
-            STADA AC
+            RUPALO GERMO LTD
           </span>
         </Link>
 
@@ -68,7 +66,7 @@ const Header = () => {
         {/* CTA Button */}
         <div className="hidden md:block">
           <Button asChild variant={isScrolled ? "default" : "hero"} size="lg">
-            <Link to="/contacto">Pedir Orçamento</Link>
+            <Link to="/contacto">Solicitar Orçamento</Link>
           </Button>
         </div>
 
@@ -110,7 +108,7 @@ const Header = () => {
                 </Link>
               ))}
               <Button asChild className="mt-2">
-                <Link to="/contacto">Pedir Orçamento</Link>
+                <Link to="/contacto">Solicitar Orçamento</Link>
               </Button>
             </nav>
           </motion.div>

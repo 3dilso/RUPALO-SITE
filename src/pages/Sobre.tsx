@@ -5,27 +5,27 @@ import teamImage from "@/assets/team-hvac.jpg";
 
 const values = [
   {
-    icon: Star,
-    title: "Qualidade",
-    description: "Comprometidos com excelência em cada serviço",
+    icon: Award, // Alterado Star para Award para excelência
+    title: "Excelência",
+    description: "Compromisso com a excelência em cada serviço prestado",
   },
   {
     icon: Shield,
     title: "Confiança",
-    description: "Transparência e honestidade com nossos clientes",
+    description: "Transparência e honestidade em todas as nossas interações",
   },
   {
     icon: Zap,
-    title: "Rapidez",
-    description: "Atendimento ágil quando você mais precisa",
+    title: "Agilidade",
+    description: "Serviços rápidos e de alta qualidade quando você mais precisa",
   },
 ];
 
 const certifications = [
-  "ISO 9001:2015",
   "Técnicos Certificados",
-  "Parceiro Autorizado",
-  "Garantia Premium",
+  "Foco em Eficiência Energética",
+  "Parceria com Fornecedores Líderes",
+  "Garantia de Serviço Premium",
 ];
 
 const Sobre = () => {
@@ -39,7 +39,7 @@ const Sobre = () => {
             animate={{ opacity: 1, y: 0 }}
             className="text-4xl md:text-5xl font-bold text-primary-foreground mb-4"
           >
-            Sobre a STADA AC
+            Sobre a RUPALO GERMO LTD
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -47,7 +47,7 @@ const Sobre = () => {
             transition={{ delay: 0.1 }}
             className="text-xl text-primary-foreground/80"
           >
-            Especialistas em Climatização em Luanda
+            Especialistas em Manutenção de Frio Industrial em Luanda
           </motion.p>
         </div>
       </section>
@@ -66,18 +66,18 @@ const Sobre = () => {
               </h2>
               <div className="space-y-4 text-muted-foreground leading-relaxed">
                 <p>
-                  A STADA AC é especialista em soluções de climatização em Luanda.
-                  Oferecemos serviços completos de instalação, manutenção e
-                  assistência técnica de ar condicionado para residências e empresas.
+                  A RUPALO GERMO LTD é especialista em soluções de manutenção de frio industrial em Luanda.
+                  Oferecemos serviços completos de manutenção preventiva, corretiva,
+                  diagnóstico de falhas e modernização de equipamentos para o setor industrial.
                 </p>
                 <p>
                   Nossa equipa é composta por técnicos certificados com anos de
-                  experiência no mercado angolano. Trabalhamos com as melhores
-                  marcas internacionais para garantir qualidade e durabilidade.
+                  experiência no mercado angolano. Trabalhamos com foco em eficiência,
+                  durabilidade e a construção de relações duradouras com nossos clientes.
                 </p>
                 <p>
-                  Desde a nossa fundação, já realizamos milhares de instalações
-                  e atendemos centenas de clientes satisfeitos em todo o país.
+                  Desde a nossa fundação, temos sido o parceiro de confiança para empresas
+                  que buscam excelência e rapidez na manutenção de seus sistemas de refrigeração.
                 </p>
               </div>
             </motion.div>
@@ -91,7 +91,7 @@ const Sobre = () => {
               <div className="rounded-2xl overflow-hidden shadow-elevated">
                 <img
                   src={teamImage}
-                  alt="Equipa STADA AC"
+                  alt="Equipa RUPALO GERMO LTD"
                   className="w-full h-auto object-cover"
                 />
               </div>
@@ -150,10 +150,10 @@ const Sobre = () => {
             className="text-center mb-12"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-              Certificações e Qualificações
+              Qualificações e Compromisso
             </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              Compromisso com a excelência reconhecido por certificações
+              Nosso compromisso com a excelência e a satisfação do cliente
             </p>
           </motion.div>
 
@@ -167,7 +167,7 @@ const Sobre = () => {
                 transition={{ delay: index * 0.1 }}
                 className="flex flex-col items-center justify-center p-6 bg-secondary rounded-xl"
               >
-                <Award className="w-10 h-10 text-primary mb-3" />
+                <CheckCircle className="w-10 h-10 text-primary mb-3" /> {/* Usando CheckCircle para certificações */}
                 <span className="text-sm font-medium text-foreground text-center">
                   {cert}
                 </span>

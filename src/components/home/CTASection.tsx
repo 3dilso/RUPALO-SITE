@@ -13,14 +13,14 @@ const CTASection = () => {
           className="text-center max-w-2xl mx-auto"
         >
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-            Pronto para Melhorar o Seu Conforto?
+            Pronto para Otimizar Seus Sistemas de Frio Industrial?
           </h2>
           <p className="text-lg text-muted-foreground mb-8">
             Peça um orçamento gratuito hoje mesmo e descubra como podemos
-            transformar o ambiente da sua casa ou empresa.
+            garantir a eficiência e durabilidade dos seus equipamentos de refrigeração.
           </p>
           <Button asChild size="xl">
-            <Link to="/contacto">Contactar Agora</Link>
+            <Link to="/contacto">Solicitar Orçamento</Link>
           </Button>
         </motion.div>
       </div>

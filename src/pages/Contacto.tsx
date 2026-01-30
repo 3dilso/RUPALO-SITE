@@ -16,10 +16,10 @@ import { Phone, Mail, MapPin, MessageCircle, Clock, CheckCircle } from "lucide-r
 import { toast } from "sonner";
 
 const serviceTypes = [
-  "Instalação",
-  "Manutenção",
-  "Assistência Técnica",
-  "Venda de Equipamentos",
+  "Manutenção Preventiva",
+  "Manutenção Corretiva e Reparação",
+  "Diagnóstico de Falhas Técnicas",
+  "Atualização e Modernização de Equipamentos",
   "Outro",
 ];
 
@@ -71,7 +71,7 @@ const Contacto = () => {
             transition={{ delay: 0.1 }}
             className="text-xl text-primary-foreground/80"
           >
-            Estamos prontos para atender você
+            Estamos prontos para atender suas necessidades de frio industrial
           </motion.p>
         </div>
       </section>
@@ -180,7 +180,7 @@ const Contacto = () => {
                       <Label htmlFor="message">Mensagem</Label>
                       <Textarea
                         id="message"
-                        placeholder="Descreva o que precisa..."
+                        placeholder="Descreva o que precisa para seus sistemas de frio industrial..."
                         value={formData.message}
                         onChange={(e) =>
                           setFormData({ ...formData, message: e.target.value })
@@ -212,7 +212,7 @@ const Contacto = () => {
               {/* Contact Cards */}
               <div className="grid sm:grid-cols-2 gap-4">
                 <a
-                  href="https://wa.me/244923456789"
+                  href="https://wa.me/244923411375?text=Olá, gostaria de solicitar um orçamento para manutenção de frio industrial."
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-start gap-4 p-6 bg-card rounded-xl shadow-card hover:shadow-card-hover transition-all"
@@ -222,12 +222,13 @@ const Contacto = () => {
                   </div>
                   <div>
                     <h3 className="font-semibold text-foreground">WhatsApp</h3>
-                    <p className="text-muted-foreground">+244 923 456 789</p>
+                    <p className="text-muted-foreground">+244 923 411 375</p>
+                    <p className="text-muted-foreground">+244 957 544 730</p>
                   </div>
                 </a>
 
                 <a
-                  href="tel:+244923456789"
+                  href="tel:+244923411375"
                   className="flex items-start gap-4 p-6 bg-card rounded-xl shadow-card hover:shadow-card-hover transition-all"
                 >
                   <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
@@ -235,12 +236,13 @@ const Contacto = () => {
                   </div>
                   <div>
                     <h3 className="font-semibold text-foreground">Telefone</h3>
-                    <p className="text-muted-foreground">+244 923 456 789</p>
+                    <p className="text-muted-foreground">+244 923 411 375</p>
+                    <p className="text-muted-foreground">+244 957 544 730</p>
                   </div>
                 </a>
 
                 <a
-                  href="mailto:contato@stadaac.co.ao"
+                  href="mailto:info@rupalogermo.com"
                   className="flex items-start gap-4 p-6 bg-card rounded-xl shadow-card hover:shadow-card-hover transition-all"
                 >
                   <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
@@ -248,12 +250,12 @@ const Contacto = () => {
                   </div>
                   <div>
                     <h3 className="font-semibold text-foreground">Email</h3>
-                    <p className="text-muted-foreground">contato@stadaac.co.ao</p>
+                    <p className="text-muted-foreground">info@rupalogermo.com</p>
                   </div>
                 </a>
 
                 <a
-                  href="https://maps.google.com/?q=Luanda,Angola"
+                  href="https://maps.google.com/?q=Luanda,Bairro Cassenda,Angola"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-start gap-4 p-6 bg-card rounded-xl shadow-card hover:shadow-card-hover transition-all"
@@ -263,7 +265,7 @@ const Contacto = () => {
                   </div>
                   <div>
                     <h3 className="font-semibold text-foreground">Localização</h3>
-                    <p className="text-muted-foreground">Luanda, Angola</p>
+                    <p className="text-muted-foreground">Luanda – Bairro Cassenda, Angola</p>
                   </div>
                 </a>
               </div>
@@ -278,7 +280,7 @@ const Contacto = () => {
                   allowFullScreen
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
-                  title="Localização STADA AC"
+                  title="Localização RUPALO GERMO LTD"
                 />
               </div>
 
@@ -304,7 +306,7 @@ const Contacto = () => {
                     <span className="font-medium text-destructive">Fechado</span>
                   </div>
                   <div className="flex justify-between pt-2 border-t mt-2">
-                    <span>Emergências</span>
+                    <span>Atendimento de Emergência</span>
                     <span className="font-medium text-whatsapp">24/7</span>
                   </div>
                 </div>

@@ -10,89 +10,89 @@ import repairImage from "@/assets/repair-hvac.jpg";
 import acModernImage from "@/assets/ac-modern.jpg";
 import teamImage from "@/assets/team-hvac.jpg";
 
-const categories = ["Todos", "Residencial", "Comercial", "Industrial"];
+const categories = ["Todos", "Armazéns Frigoríficos", "Fábricas", "Supermercados"];
 
 const projects = [
   {
     id: 1,
     image: acModernImage,
-    category: "Residencial",
-    title: "Apartamento T3 - Talatona",
-    description: "Instalação de 3 splits inverter Samsung",
+    category: "Armazéns Frigoríficos",
+    title: "Câmara Frigorífica - Viana",
+    description: "Manutenção preventiva e otimização de sistema de refrigeração de grande porte.",
     date: "Janeiro 2025",
-    equipment: "Samsung Wind-Free 12000 BTU",
+    equipment: "Compressor Bitzer, Evaporadores Güntner",
   },
   {
     id: 2,
     image: heroImage,
-    category: "Comercial",
-    title: "Escritório Empresarial - Baixa",
-    description: "Sistema VRF completo para 500m²",
+    category: "Fábricas",
+    title: "Linha de Produção - Zona Industrial",
+    description: "Instalação e calibração de sistema de frio para processo industrial.",
     date: "Dezembro 2024",
-    equipment: "Daikin VRV IV",
+    equipment: "Chiller Carrier, Unidades Condensadoras Danfoss",
   },
   {
     id: 3,
     image: maintenanceImage,
-    category: "Residencial",
-    title: "Vivenda T5 - Miramar",
-    description: "Instalação de 6 splits e sistema central",
+    category: "Supermercados",
+    title: "Expositores Refrigerados - Talatona",
+    description: "Reparação e manutenção de balcões e câmaras de frio para retalho.",
     date: "Novembro 2024",
-    equipment: "LG Dual Inverter",
+    equipment: "Compressores Copeland, Válvulas de Expansão Emerson",
   },
   {
     id: 4,
     image: repairImage,
-    category: "Industrial",
-    title: "Fábrica - Viana",
-    description: "Sistema de climatização industrial",
+    category: "Armazéns Frigoríficos",
+    title: "Túnel de Congelamento - Cacuaco",
+    description: "Diagnóstico e reparo de falhas em túnel de congelamento rápido.",
     date: "Outubro 2024",
-    equipment: "Carrier Industrial",
+    equipment: "Ventiladores EBM-Papst, Controladores Dixell",
   },
   {
     id: 5,
     image: teamImage,
-    category: "Comercial",
-    title: "Hotel - Ilha de Luanda",
-    description: "Climatização de 50 quartos",
+    category: "Fábricas",
+    title: "Sistema HVAC Industrial - Luanda Sul",
+    description: "Manutenção corretiva em sistema de climatização para ambiente fabril.",
     date: "Setembro 2024",
-    equipment: "Midea Inverter",
+    equipment: "Unidades de Tratamento de Ar Trane",
   },
   {
     id: 6,
     image: acModernImage,
-    category: "Residencial",
-    title: "Condomínio - Kilamba",
-    description: "Instalação em 12 apartamentos",
+    category: "Supermercados",
+    title: "Central de Frio - Kilamba",
+    description: "Otimização e modernização de central de frio para supermercado.",
     date: "Agosto 2024",
-    equipment: "Gree Inverter",
+    equipment: "Rack de Compressores Frascold, Condensadores Alfa Laval",
   },
   {
     id: 7,
     image: heroImage,
-    category: "Comercial",
-    title: "Restaurante - Largo da Maianga",
-    description: "Sistema cassete 4 vias",
+    category: "Armazéns Frigoríficos",
+    title: "Portas Frigoríficas - Benfica",
+    description: "Manutenção e ajuste de portas frigoríficas de alta performance.",
     date: "Julho 2024",
-    equipment: "Fujitsu Cassete",
+    equipment: "Portas Industriais Isocold",
   },
   {
     id: 8,
     image: maintenanceImage,
-    category: "Industrial",
-    title: "Armazém - Cacuaco",
-    description: "Refrigeração industrial",
+    category: "Fábricas",
+    title: "Sistema de Refrigeração de Água - Viana",
+    description: "Manutenção e reparo de chiller para processo de arrefecimento de água.",
     date: "Junho 2024",
-    equipment: "Trane Chiller",
+    equipment: "Chiller York, Bombas Grundfos",
   },
   {
     id: 9,
     image: repairImage,
-    category: "Residencial",
-    title: "Apartamento T2 - Ingombota",
-    description: "Instalação de 2 splits",
+    category: "Supermercados",
+    title: "Câmaras de Congelados - Ingombota",
+    description: "Diagnóstico e reparo de câmaras de congelados com problemas de temperatura.",
     date: "Maio 2024",
-    equipment: "Haier Inverter",
+    equipment: "Evaporadores Lu-Ve, Controladores Carel",
   },
 ];
 
@@ -114,7 +114,7 @@ const Galeria = () => {
             animate={{ opacity: 1, y: 0 }}
             className="text-4xl md:text-5xl font-bold text-primary-foreground mb-4"
           >
-            Nossos Trabalhos
+            Nossos Projetos
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -122,7 +122,7 @@ const Galeria = () => {
             transition={{ delay: 0.1 }}
             className="text-xl text-primary-foreground/80"
           >
-            Veja alguns dos projetos que realizamos
+            Veja alguns dos nossos trabalhos em manutenção de frio industrial
           </motion.p>
         </div>
       </section>
@@ -260,10 +260,10 @@ const Galeria = () => {
             viewport={{ once: true }}
           >
             <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-4">
-              Quer um resultado como este?
+              Precisa de Manutenção para Seus Sistemas?
             </h2>
             <Button asChild size="lg">
-              <Link to="/contacto">Pedir Orçamento</Link>
+              <Link to="/contacto">Solicitar Orçamento</Link>
             </Button>
           </motion.div>
         </div>

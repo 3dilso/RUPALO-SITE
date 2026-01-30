@@ -15,16 +15,21 @@
     --popover: 0 0% 100%;
     --popover-foreground: 220 15% 20%;
 
-    --primary: 210 100% 40%;
-    --primary-foreground: 0 0% 100%;
+    /* RUPALO GERMO LTD Colors */
+    --rupalo-dark-blue: 210 100% 25%; /* Darker blue for primary */
+    --rupalo-light-blue: 210 100% 40%; /* Lighter blue for secondary */
+    --rupalo-accent-orange: 16 100% 60%; /* Keep existing accent for contrast */
 
-    --secondary: 207 88% 94%;
-    --secondary-foreground: 210 100% 30%;
+    --primary: var(--rupalo-dark-blue);
+    --primary-foreground: 0 0% 100%; /* White */
+
+    --secondary: var(--rupalo-light-blue);
+    --secondary-foreground: 210 100% 20%; /* Dark text on light blue */
 
     --muted: 210 20% 96%;
     --muted-foreground: 220 10% 45%;
 
-    --accent: 16 100% 60%;
+    --accent: var(--rupalo-accent-orange);
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84% 60%;
@@ -43,9 +48,9 @@
     --surface: 210 30% 98%;
     --surface-elevated: 0 0% 100%;
     
-    --gradient-primary: linear-gradient(135deg, hsl(210 100% 40%) 0%, hsl(210 100% 30%) 100%);
-    --gradient-hero: linear-gradient(135deg, hsl(210 100% 40% / 0.95) 0%, hsl(210 100% 25% / 0.9) 100%);
-    --gradient-cta: linear-gradient(135deg, hsl(207 88% 94%) 0%, hsl(207 88% 88%) 100%);
+    --gradient-primary: linear-gradient(135deg, hsl(var(--rupalo-dark-blue)) 0%, hsl(var(--rupalo-dark-blue) / 0.8) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(var(--rupalo-dark-blue) / 0.95) 0%, hsl(var(--rupalo-dark-blue) / 0.9) 100%);
+    --gradient-cta: linear-gradient(135deg, hsl(var(--rupalo-light-blue)) 0%, hsl(var(--rupalo-light-blue) / 0.8) 100%);
     
     --shadow-sm: 0 1px 2px hsl(220 15% 20% / 0.05);
     --shadow-md: 0 4px 12px hsl(220 15% 20% / 0.08);
@@ -69,13 +74,13 @@
     --card-foreground: 210 40% 98%;
     --popover: 220 20% 12%;
     --popover-foreground: 210 40% 98%;
-    --primary: 210 100% 50%;
+    --primary: 210 100% 50%; /* Dark mode primary */
     --primary-foreground: 0 0% 100%;
-    --secondary: 210 30% 20%;
+    --secondary: 210 30% 20%; /* Dark mode secondary */
     --secondary-foreground: 210 40% 98%;
     --muted: 220 20% 18%;
     --muted-foreground: 215 20% 65%;
-    --accent: 16 100% 55%;
+    --accent: 16 100% 55%; /* Dark mode accent */
     --accent-foreground: 0 0% 100%;
     --destructive: 0 62% 30%;
     --destructive-foreground: 210 40% 98%;
