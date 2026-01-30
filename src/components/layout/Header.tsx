@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X } from "lucide-react"; // Removido Wind, pois será substituído pela logo
+import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -8,7 +8,7 @@ const navLinks = [
   { name: "Home", path: "/" },
   { name: "Sobre Nós", path: "/sobre" },
   { name: "Serviços", path: "/servicos" },
-  { name: "Projetos", path: "/galeria" }, // Alterado Galeria para Projetos
+  { name: "Projetos", path: "/galeria" },
   { name: "Contacto", path: "/contacto" },
 ];
 
@@ -39,11 +39,12 @@ const Header = () => {
     >
       <div className="container mx-auto flex items-center justify-between">
         {/* Logo */}
-        <Link to="/" className="flex items-center gap-2">
-          <img src="/logo-oficial.png" alt="RUPALO GERMO LTD Logo" className="h-10 w-auto" />
-          <span className={`text-xl font-bold ${isScrolled ? "text-foreground" : "text-primary-foreground"}`}>
-            RUPALO GERMO LTD
-          </span>
+        <Link to="/" className="flex items-center">
+          <img 
+            src="/logo-oficial.png" 
+            alt="RUPALO GERMO LTD Logo" 
+            className="h-14 w-auto object-contain" // Ajustado o tamanho para h-14 e object-contain
+          />
         </Link>
 
         {/* Desktop Navigation */}

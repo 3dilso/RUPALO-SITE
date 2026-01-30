@@ -5,7 +5,7 @@ import teamImage from "@/assets/team-hvac.jpg";
 
 const values = [
   {
-    icon: Award, // Alterado Star para Award para excelência
+    icon: Award,
     title: "Excelência",
     description: "Compromisso com a excelência em cada serviço prestado",
   },
@@ -167,7 +167,7 @@ const Sobre = () => {
                 transition={{ delay: index * 0.1 }}
                 className="flex flex-col items-center justify-center p-6 bg-secondary rounded-xl"
               >
-                <CheckCircle className="w-10 h-10 text-primary mb-3" /> {/* Usando CheckCircle para certificações */}
+                <CheckCircle className="w-10 h-10 text-primary mb-3" />
                 <span className="text-sm font-medium text-foreground text-center">
                   {cert}
                 </span>

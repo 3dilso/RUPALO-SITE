@@ -1,4 +1,4 @@
-import { Wrench, Calendar, Search } from "lucide-react"; // Alterado Headphones para Search
+import { Wrench, Calendar, Search } from "lucide-react";
 import { motion } from "framer-motion";
 
 const services = [
@@ -15,7 +15,7 @@ const services = [
       "Intervenções rápidas e eficazes para restaurar o funcionamento ideal dos seus equipamentos de refrigeração.",
   },
   {
-    icon: Search, // Ícone de busca para diagnóstico
+    icon: Search,
     title: "Diagnóstico de Falhas",
     description: "Identificação precisa de problemas para soluções eficazes e duradouras em sistemas de frio industrial.",
   },

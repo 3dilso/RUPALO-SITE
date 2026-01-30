@@ -9,7 +9,7 @@ const Footer = () => {
           {/* Logo & Description */}
           <div className="space-y-4">
             <Link to="/" className="flex items-center gap-2">
-              <img src="/logo-oficial.png" alt="RUPALO GERMO LTD Logo" className="h-10 w-auto" />
+              <img src="/logo-oficial.png" alt="RUPALO GERMO LTD Logo" className="h-10 w-auto object-contain" />
               <span className="text-xl font-bold">RUPALO GERMO LTD</span>
             </Link>
             <p className="text-primary-foreground/70 text-sm leading-relaxed">
@@ -51,7 +51,7 @@ const Footer = () => {
                 { name: "Home", path: "/" },
                 { name: "Sobre Nós", path: "/sobre" },
                 { name: "Serviços", path: "/servicos" },
-                { name: "Projetos", path: "/galeria" }, // Alterado Galeria para Projetos
+                { name: "Projetos", path: "/galeria" },
                 { name: "Contacto", path: "/contacto" },
               ].map((link) => (
                 <li key={link.path}>

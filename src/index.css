@@ -7,7 +7,7 @@
 @layer base {
   :root {
     --background: 0 0% 100%;
-    --foreground: 220 15% 20%;
+    --foreground: 220 15% 20%; /* Dark grey for main text */
 
     --card: 0 0% 100%;
     --card-foreground: 220 15% 20%;
@@ -15,21 +15,21 @@
     --popover: 0 0% 100%;
     --popover-foreground: 220 15% 20%;
 
-    /* RUPALO GERMO LTD Colors */
-    --rupalo-dark-blue: 210 100% 25%; /* Darker blue for primary */
-    --rupalo-light-blue: 210 100% 40%; /* Lighter blue for secondary */
-    --rupalo-accent-orange: 16 100% 60%; /* Keep existing accent for contrast */
+    /* RUPALO GERMO LTD Colors based on logo */
+    --rupalo-dark-blue: 210 100% 20%; /* Deeper blue for primary */
+    --rupalo-light-blue: 210 100% 35%; /* Lighter blue for secondary */
+    --rupalo-vibrant-blue: 210 100% 55%; /* Vibrant blue for accent */
 
     --primary: var(--rupalo-dark-blue);
     --primary-foreground: 0 0% 100%; /* White */
 
     --secondary: var(--rupalo-light-blue);
-    --secondary-foreground: 210 100% 20%; /* Dark text on light blue */
+    --secondary-foreground: 210 100% 15%; /* Darker text on light blue */
 
     --muted: 210 20% 96%;
-    --muted-foreground: 220 10% 45%;
+    --muted-foreground: 220 10% 45%; /* Medium grey for muted text */
 
-    --accent: var(--rupalo-accent-orange);
+    --accent: var(--rupalo-vibrant-blue);
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84% 60%;

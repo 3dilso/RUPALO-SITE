@@ -6,8 +6,8 @@ const clients = [
   { name: "Armazéns Frigoríficos", icon: Building2 },
   { name: "Supermercados", icon: Store },
   { name: "Hotéis", icon: Hotel },
-  { name: "Restaurantes", icon: Landmark }, // Usando Landmark para representar estabelecimentos comerciais
-  { name: "Centros Logísticos", icon: GraduationCap }, // Usando GraduationCap como placeholder para centros logísticos
+  { name: "Restaurantes", icon: Landmark },
+  { name: "Centros Logísticos", icon: GraduationCap },
 ];
 
 const ClientsSection = () => {

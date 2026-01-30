@@ -5,7 +5,7 @@ import heroImage from "@/assets/hero-hvac.jpg";
 
 const HeroSection = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden text-center">
       {/* Background Image */}
       <div className="absolute inset-0">
         <img
@@ -17,40 +17,38 @@ const HeroSection = () => {
       </div>
 
       {/* Content */}
-      <div className="container mx-auto relative z-10 pt-20">
-        <div className="max-w-3xl">
-          <motion.h1
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground leading-tight mb-6"
-          >
-            Soluções Completas em Manutenção de Frio Industrial para Luanda
-          </motion.h1>
+      <div className="container mx-auto relative z-10 pt-20 pb-10">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="max-w-4xl mx-auto"
+        >
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold text-primary-foreground leading-tight mb-6 drop-shadow-lg">
+            <span className="block">Excelência em Frio Industrial</span>
+            <span className="block text-rupalo-vibrant-blue">Manutenção que Você Pode Confiar</span>
+          </h1>
 
-          <motion.p
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-lg md:text-xl text-primary-foreground/90 mb-8 max-w-2xl"
+          <p
+            className="text-lg md:text-xl text-primary-foreground/90 mb-10 max-w-3xl mx-auto"
           >
-            Manutenção Preventiva, Corretiva, Diagnóstico de Falhas e Modernização de Equipamentos para o Setor Industrial
-          </motion.p>
+            Soluções completas em manutenção preventiva, corretiva, diagnóstico de falhas e modernização de equipamentos para o setor industrial em Luanda.
+          </p>
 
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
-            className="flex flex-col sm:flex-row gap-4"
+            className="flex flex-col sm:flex-row justify-center gap-4"
           >
             <Button asChild variant="hero" size="xl">
               <Link to="/contacto">Solicitar Orçamento</Link>
             </Button>
             <Button asChild variant="heroOutline" size="xl">
-              <Link to="/servicos">Ver Serviços</Link>
+              <Link to="/servicos">Ver Nossos Serviços</Link>
             </Button>
           </motion.div>
-        </div>
+        </motion.div>
       </div>
 
       {/* Decorative Element */}
