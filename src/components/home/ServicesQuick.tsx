@@ -1,5 +1,4 @@
 import { Wrench, Calendar, Search } from "lucide-react";
-import { motion } from "framer-motion";
 
 const services = [
   {
@@ -26,17 +25,13 @@ const ServicesQuick = () => {
     <section className="py-20 bg-background">
       <div className="container mx-auto">
         <div className="grid md:grid-cols-3 gap-8">
-          {services.map((service, index) => (
-            <motion.div
+          {services.map((service) => (
+            <div
               key={service.title}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
               className="group bg-card rounded-xl p-8 shadow-card hover:shadow-card-hover transition-all duration-300 border border-border hover:border-primary/20"
             >
-              <div className="w-14 h-14 rounded-lg bg-primary/10 flex items-center justify-center mb-6 group-hover:bg-primary transition-colors"> {/* Cor do círculo ajustada */}
-                <service.icon className="w-7 h-7 text-primary group-hover:text-primary-foreground transition-colors" /> {/* Cor do ícone ajustada */}
+              <div className="w-14 h-14 rounded-lg bg-primary/10 flex items-center justify-center mb-6 group-hover:bg-primary transition-colors">
+                <service.icon className="w-7 h-7 text-primary group-hover:text-primary-foreground transition-colors" />
               </div>
               <h3 className="text-xl font-bold mb-3 text-foreground">
                 {service.title}
@@ -44,7 +39,7 @@ const ServicesQuick = () => {
               <p className="text-muted-foreground leading-relaxed">
                 {service.description}
               </p>
-            </motion.div>
+            </div>
           ))}
         </div>
       </div>

@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import Layout from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
-import { motion } from "framer-motion";
 import { MessageCircle, Check } from "lucide-react";
 import heroImage from "@/assets/hero-hvac.jpg";
 import maintenanceImage from "@/assets/maintenance-hvac.jpg";
@@ -73,21 +72,16 @@ const Servicos = () => {
       {/* Hero */}
       <section className="pt-32 pb-16 bg-gradient-primary">
         <div className="container mx-auto text-center">
-          <motion.h1
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+          <h1
             className="text-4xl md:text-5xl font-bold text-primary-foreground mb-4"
           >
             Nossos Serviços
-          </motion.h1>
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.1 }}
+          </h1>
+          <p
             className="text-xl text-primary-foreground/80"
           >
             Soluções Completas em Manutenção de Frio Industrial
-          </motion.p>
+          </p>
         </div>
       </section>
 
@@ -96,12 +90,8 @@ const Servicos = () => {
         <div className="container mx-auto">
           <div className="space-y-24">
             {services.map((service, index) => (
-              <motion.div
+              <div
                 key={service.title}
-                initial={{ opacity: 0, y: 40 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6 }}
                 className={`grid lg:grid-cols-2 gap-12 items-center ${
                   index % 2 === 1 ? "lg:flex-row-reverse" : ""
                 }`}
@@ -137,11 +127,11 @@ const Servicos = () => {
                     ))}
                   </ul>
 
-                  <Button asChild size="lg">
-                    <Link to={service.ctaLink}>{service.cta}</Link>
+                  <Button href={service.ctaLink} size="lg">
+                    {service.cta}
                   </Button>
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -150,26 +140,17 @@ const Servicos = () => {
       {/* CTA */}
       <section className="py-16 bg-surface">
         <div className="container mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+          <div
             className="text-center"
           >
             <p className="text-xl text-muted-foreground mb-6">
               Precisa de assistência imediata ou tem alguma dúvida?
             </p>
-            <Button asChild variant="whatsapp" size="lg">
-              <a
-                href="https://wa.me/244923411375?text=Olá, gostaria de solicitar um orçamento para manutenção de frio industrial."
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <MessageCircle className="w-5 h-5 mr-2" />
-                Falar no WhatsApp
-              </a>
+            <Button variant="whatsapp" size="lg" href="https://wa.me/244923411375?text=Olá, gostaria de solicitar um orçamento para manutenção de frio industrial.">
+              <MessageCircle className="w-5 h-5 mr-2" />
+              Falar no WhatsApp
             </Button>
-          </motion.div>
+          </div>
         </div>
       </section>
     </Layout>

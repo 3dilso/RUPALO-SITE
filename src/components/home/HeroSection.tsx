@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { motion } from "framer-motion";
 import heroImage from "@/assets/hero-hvac.jpg";
 
 const HeroSection = () => {
@@ -13,17 +12,12 @@ const HeroSection = () => {
           alt="Técnico realizando manutenção em sistema de frio industrial"
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-hero" /> {/* Opacidade ajustada no CSS */}
+        <div className="absolute inset-0 bg-gradient-hero" />
       </div>
 
       {/* Content */}
       <div className="container mx-auto relative z-10 pt-20 pb-10">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="max-w-4xl mx-auto"
-        >
+        <div className="max-w-4xl mx-auto">
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold text-primary-foreground leading-tight mb-6 drop-shadow-lg">
             <span className="block">Conforto Térmico Industrial:</span>
             <span className="block text-accent">A Especialidade da RUPALO GERMO LTD</span>
@@ -35,23 +29,16 @@ const HeroSection = () => {
             Soluções inovadoras em frio industrial para garantir o ambiente ideal e a máxima eficiência dos seus equipamentos em Luanda.
           </p>
 
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-            className="flex flex-col sm:flex-row justify-center gap-4"
-          >
-            <Button asChild variant="hero" size="xl">
-              <Link to="/contacto">Solicitar Orçamento</Link>
+          <div className="flex flex-col sm:flex-row justify-center gap-4">
+            <Button href="/contacto" variant="hero" size="xl">
+              Solicitar Orçamento
             </Button>
-            <Button asChild variant="heroOutline" size="xl">
-              <Link to="/servicos">Ver Nossos Serviços</Link>
+            <Button href="/servicos" variant="heroOutline" size="xl">
+              Ver Nossos Serviços
             </Button>
-          </motion.div>
-        </motion.div>
+          </div>
+        </div>
       </div>
-
-      {/* Removido o div com o gradiente inferior */}
     </section>
   );
 };

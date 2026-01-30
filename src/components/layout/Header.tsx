@@ -1,8 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { motion, AnimatePresence } from "framer-motion";
+import { Button } from "@/components/ui/button"; // Mantendo o Button simplificado
 
 const navLinks = [
   { name: "Home", path: "/" },
@@ -43,31 +42,34 @@ const Header = () => {
           <img 
             src="/logo-oficial.png" 
             alt="RUPALO GERMO LTD Logo" 
-            className="h-16 w-auto object-contain" // Aumentado o tamanho para h-16 para melhor visibilidade
+            className="h-16 w-auto object-contain"
           />
         </Link>
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center gap-8">
-          {navLinks.map((link) => (
-            <Link
-              key={link.path}
-              to={link.path}
-              className={`font-medium transition-colors ${
-                location.pathname === link.path
-                  ? isScrolled ? "text-primary" : "text-primary-foreground"
-                  : isScrolled ? "text-foreground/70 hover:text-primary" : "text-primary-foreground/80 hover:text-primary-foreground"
-              }`}
-            >
-              {link.name}
-            </Link>
-          ))}
+          <ul className="flex gap-8">
+            {navLinks.map((link) => (
+              <li key={link.path}>
+                <Link
+                  to={link.path}
+                  className={`font-medium transition-colors ${
+                    location.pathname === link.path
+                      ? isScrolled ? "text-primary" : "text-primary-foreground"
+                      : isScrolled ? "text-foreground/70 hover:text-primary" : "text-primary-foreground/80 hover:text-primary-foreground"
+                  }`}
+                >
+                  {link.name}
+                </Link>
+              </li>
+            ))}
+          </ul>
         </nav>
 
         {/* CTA Button */}
         <div className="hidden md:block">
-          <Button asChild variant={isScrolled ? "default" : "hero"} size="lg">
-            <Link to="/contacto">Solicitar Orçamento</Link>
+          <Button href="/contacto" variant={isScrolled ? "default" : "hero"} size="lg">
+            Solicitar Orçamento
           </Button>
         </div>
 
@@ -86,35 +88,34 @@ const Header = () => {
       </div>
 
       {/* Mobile Menu */}
-      <AnimatePresence>
-        {isOpen && (
-          <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: "auto" }}
-            exit={{ opacity: 0, height: 0 }}
-            className="md:hidden bg-background border-t"
-          >
-            <nav className="container mx-auto py-4 flex flex-col gap-4">
+      {isOpen && (
+        <div
+          className="md:hidden bg-background border-t"
+        >
+          <nav className="container mx-auto py-4 flex flex-col gap-4">
+            <ul className="flex flex-col gap-4">
               {navLinks.map((link) => (
-                <Link
-                  key={link.path}
-                  to={link.path}
-                  className={`py-2 font-medium ${
-                    location.pathname === link.path
-                      ? "text-primary"
-                      : "text-foreground/70"
-                  }`}
-                >
-                  {link.name}
-                </Link>
+                <li key={link.path}>
+                  <Link
+                    to={link.path}
+                    className={`py-2 font-medium ${
+                      location.pathname === link.path
+                        ? "text-primary"
+                        : "text-foreground/70"
+                    }`}
+                    onClick={() => setIsOpen(false)} // Close menu on link click
+                  >
+                    {link.name}
+                  </Link>
+                </li>
               ))}
-              <Button asChild className="mt-2">
-                <Link to="/contacto">Solicitar Orçamento</Link>
-              </Button>
-            </nav>
-          </motion.div>
-        )}
-      </AnimatePresence>
+            </ul>
+            <Button href="/contacto" className="mt-2">
+              Solicitar Orçamento
+            </Button>
+          </nav>
+        </div>
+      )}
     </header>
   );
 };

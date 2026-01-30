@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { motion } from "framer-motion";
 import { Check } from "lucide-react";
 import maintenanceImage from "@/assets/maintenance-hvac.jpg";
 import repairImage from "@/assets/repair-hvac.jpg";
@@ -32,28 +31,19 @@ const FeaturedServicesSection = () => {
   return (
     <section className="py-20 bg-background">
       <div className="container mx-auto">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="text-center mb-12"
-        >
+        <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
             Nossos Principais Serviços
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
             Oferecemos uma gama completa de soluções para manter seus sistemas de frio industrial em perfeito funcionamento.
           </p>
-        </motion.div>
+        </div>
 
         <div className="grid lg:grid-cols-2 gap-12">
-          {featuredServices.map((service, index) => (
-            <motion.div
+          {featuredServices.map((service) => (
+            <div
               key={service.title}
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
               className="bg-card rounded-2xl shadow-card overflow-hidden"
             >
               <img
@@ -76,16 +66,16 @@ const FeaturedServicesSection = () => {
                     </li>
                   ))}
                 </ul>
-                <Button asChild variant="secondary" className="w-full text-primary-foreground"> {/* Adicionado text-primary-foreground */}
-                  <Link to="/servicos">Saber Mais</Link>
+                <Button href="/servicos" variant="secondary" className="w-full text-primary-foreground">
+                  Saber Mais
                 </Button>
               </div>
-            </motion.div>
+            </div>
           ))}
         </div>
         <div className="text-center mt-12">
-          <Button asChild size="lg" variant="outline">
-            <Link to="/servicos">Ver Todos os Serviços</Link>
+          <Button href="/servicos" size="lg" variant="outline">
+            Ver Todos os Serviços
           </Button>
         </div>
       </div>

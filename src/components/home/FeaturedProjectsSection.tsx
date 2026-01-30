@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { motion } from "framer-motion";
 import acModernImage from "@/assets/ac-modern.jpg";
 import heroImage from "@/assets/hero-hvac.jpg";
 
@@ -25,28 +24,19 @@ const FeaturedProjectsSection = () => {
   return (
     <section className="py-20 bg-surface">
       <div className="container mx-auto">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="text-center mb-12"
-        >
+        <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
             Nossos Projetos em Destaque
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
             Conheça alguns dos nossos trabalhos que demonstram nossa expertise em frio industrial.
           </p>
-        </motion.div>
+        </div>
 
         <div className="grid md:grid-cols-2 gap-8">
-          {featuredProjects.map((project, index) => (
-            <motion.div
+          {featuredProjects.map((project) => (
+            <div
               key={project.id}
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
               className="group bg-card rounded-2xl shadow-card overflow-hidden"
             >
               <img
@@ -65,12 +55,12 @@ const FeaturedProjectsSection = () => {
                   {project.description}
                 </p>
               </div>
-            </motion.div>
+            </div>
           ))}
         </div>
         <div className="text-center mt-12">
-          <Button asChild size="lg" variant="outline">
-            <Link to="/galeria">Ver Todos os Projetos</Link>
+          <Button href="/galeria" size="lg" variant="outline">
+            Ver Todos os Projetos
           </Button>
         </div>
       </div>

@@ -4,16 +4,8 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
-import { motion } from "framer-motion";
+import { Select, SelectItem } from "@/components/ui/select"; // Usando o Select simplificado
 import { Phone, Mail, MapPin, MessageCircle, Clock, CheckCircle } from "lucide-react";
-import { toast } from "sonner";
 
 const serviceTypes = [
   "Manutenção Preventiva",
@@ -39,7 +31,7 @@ const Contacto = () => {
     
     // Basic validation
     if (!formData.name || !formData.email || !formData.phone) {
-      toast.error("Por favor preencha todos os campos obrigatórios.");
+      alert("Por favor preencha todos os campos obrigatórios."); // Usando alert simples
       return;
     }
 
@@ -50,7 +42,7 @@ const Contacto = () => {
     
     setIsSubmitting(false);
     setIsSuccess(true);
-    toast.success("Mensagem enviada com sucesso!");
+    alert("Mensagem enviada com sucesso!"); // Usando alert simples
   };
 
   return (
@@ -58,21 +50,16 @@ const Contacto = () => {
       {/* Hero */}
       <section className="pt-32 pb-16 bg-gradient-primary">
         <div className="container mx-auto text-center">
-          <motion.h1
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+          <h1
             className="text-4xl md:text-5xl font-bold text-primary-foreground mb-4"
           >
             Entre em Contacto
-          </motion.h1>
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.1 }}
+          </h1>
+          <p
             className="text-xl text-primary-foreground/80"
           >
             Estamos prontos para atender suas necessidades de frio industrial
-          </motion.p>
+          </p>
         </div>
       </section>
 
@@ -81,20 +68,14 @@ const Contacto = () => {
         <div className="container mx-auto">
           <div className="grid lg:grid-cols-2 gap-12">
             {/* Form */}
-            <motion.div
-              initial={{ opacity: 0, x: -30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-            >
+            <div>
               <div className="bg-card rounded-2xl p-8 shadow-card">
                 <h2 className="text-2xl font-bold text-foreground mb-6">
                   Envie sua Mensagem
                 </h2>
 
                 {isSuccess ? (
-                  <motion.div
-                    initial={{ opacity: 0, scale: 0.9 }}
-                    animate={{ scale: 1, opacity: 1 }}
+                  <div
                     className="text-center py-12"
                   >
                     <div className="w-16 h-16 rounded-full bg-whatsapp/10 flex items-center justify-center mx-auto mb-6">
@@ -109,7 +90,7 @@ const Contacto = () => {
                     <Button onClick={() => setIsSuccess(false)}>
                       Enviar Nova Mensagem
                     </Button>
-                  </motion.div>
+                  </div>
                 ) : (
                   <form onSubmit={handleSubmit} className="space-y-6">
                     <div>
@@ -159,20 +140,17 @@ const Contacto = () => {
                       <Label htmlFor="service">Tipo de Serviço</Label>
                       <Select
                         value={formData.service}
-                        onValueChange={(value) =>
-                          setFormData({ ...formData, service: value })
+                        onChange={(e) =>
+                          setFormData({ ...formData, service: e.target.value })
                         }
+                        className="mt-2"
                       >
-                        <SelectTrigger className="mt-2">
-                          <SelectValue placeholder="Selecione um serviço" />
-                        </SelectTrigger>
-                        <SelectContent>
-                          {serviceTypes.map((service) => (
-                            <SelectItem key={service} value={service}>
-                              {service}
-                            </SelectItem>
-                          ))}
-                        </SelectContent>
+                        <option value="" disabled>Selecione um serviço</option> {/* Placeholder para Select */}
+                        {serviceTypes.map((service) => (
+                          <SelectItem key={service} value={service}>
+                            {service}
+                          </SelectItem>
+                        ))}
                       </Select>
                     </div>
 
@@ -200,13 +178,10 @@ const Contacto = () => {
                   </form>
                 )}
               </div>
-            </motion.div>
+            </div>
 
             {/* Contact Info */}
-            <motion.div
-              initial={{ opacity: 0, x: 30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
+            <div
               className="space-y-6"
             >
               {/* Contact Cards */}
@@ -311,7 +286,7 @@ const Contacto = () => {
                   </div>
                 </div>
               </div>
-            </motion.div>
+            </div>
           </div>
         </div>
       </section>
