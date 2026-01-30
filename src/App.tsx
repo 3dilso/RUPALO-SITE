@@ -3,6 +3,7 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import TestPage from "./pages/TestPage"; // Import the new TestPage
 import Index from "./pages/Index";
 import Sobre from "./pages/Sobre";
 import Servicos from "./pages/Servicos";
@@ -14,19 +15,18 @@ const queryClient = new QueryClient();
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
-    {/* Toaster e Sonner são componentes globais e não precisam estar dentro do TooltipProvider */}
     <Toaster />
     <Sonner />
-    <TooltipProvider> {/* O TooltipProvider agora envolve apenas o BrowserRouter */}
+    <TooltipProvider>
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Index />} />
-          <Route path="/sobre" element={<Sobre />} />
-          <Route path="/servicos" element={<Servicos />} />
-          <Route path="/galeria" element={<Galeria />} />
-          <Route path="/contacto" element={<Contacto />} />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-          <Route path="*" element={<NotFound />} />
+          <Route path="/" element={<TestPage />} /> {/* Render TestPage on the root route */}
+          {/* Temporarily comment out other routes to isolate the issue */}
+          {/* <Route path="/sobre" element={<Sobre />} /> */}
+          {/* <Route path="/servicos" element={<Servicos />} /> */}
+          {/* <Route path="/galeria" element={<Galeria />} /> */}
+          {/* <Route path="/contacto" element={<Contacto />} /> */}
+          {/* <Route path="*" element={<NotFound />} /> */}
         </Routes>
       </BrowserRouter>
     </TooltipProvider>
